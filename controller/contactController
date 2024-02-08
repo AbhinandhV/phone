@@ -14,4 +14,11 @@ router.post("/add",async(req,res)=>
     )
 })
 
+router.post("/search",async(req,res)=>
+{
+    let data=req.body
+    let result=await phonemodels.find(data)
+    res.json(result)
+})
+
 module.exports=router
