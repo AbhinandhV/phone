@@ -1,0 +1,10 @@
+const mongoose=require("mongoose")
+
+const phoneSchema=new mongoose.Schema(
+    {
+        name:String,
+        phonenumber:String,
+    }
+)
+
+module.exports=mongoose.model("contacts",phoneSchema)
